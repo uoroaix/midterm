@@ -1,0 +1,19 @@
+<div class="container">
+<h1><%= @idea.title %></h1>
+  <div class="row">
+    <div class="well">
+  <p>Description: <%= @idea.body %></p>
+  <p><%= link_to "Add Comment", new_comment_path, class: "btn btn-default" %></p>
+  <p>Joined By:</p>
+    </div>
+  </div>
+<h1> Comments </h1>
+<hr>
+<% @comments.each do |comment| %>
+<div class="well">
+  <p><%= comment.message %></p>
+  <p>By:<%= comment.user.full_name %></p>
+</div>
+<% end %>
+
+

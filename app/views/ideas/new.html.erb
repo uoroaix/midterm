@@ -1,0 +1,13 @@
+<h1> Create Your Ideas
+
+<%= form_for @idea do |f| %>
+  <%= f.label :title, "Title:" %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :body, "Enter your ideas: " %>
+  <%= f.text_area :body %>
+  <br>
+  <%= f.submit "Submit", class: "btn btn-default" %>
+<% end %>
+
+</h1>
